@@ -1,0 +1,10 @@
+<div [formGroup]="form">
+  <ng-container *ngIf="control.type == 'input'">
+    <mat-form-field appearance="fill" class="long-form-field">
+      <mat-label>{{control.label}}</mat-label>
+      <input matInput [type]="control.type" [formControlName]="control.key" [style.visible]="control.visible?'hidden':'visible'"
+        [readonly]="control.enabled">
+    </mat-form-field>
+    <div>{{control.enabled}}</div>
+  </ng-container>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <div [ngSwitch]="control.type">
+    <app-input
+      *ngSwitchCase="'input'"
+      [control]="control"
+      [form]="form"
+    ></app-input>
+    <app-dropdown
+      *ngSwitchCase="'dropdown'"
+      [control]="control"
+      [form]="form"
+    ></app-dropdown>
+  </div>
+</div>
