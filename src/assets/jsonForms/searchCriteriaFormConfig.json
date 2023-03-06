@@ -1,0 +1,65 @@
+{
+    "name": "Fahrzeugdaten",
+    "controls": [
+        {
+            "type": "dropdown",
+            "key": "versichertesObjekt.wagnisKennzeichen.key",
+            "label": "Wagnis-KZ",
+            "options": [
+                {
+                    "key": "IN",
+                    "value": "India"
+                },
+                {
+                    "key": "USA",
+                    "value": "United States of America"
+                },
+                {
+                    "key": "UK",
+                    "value": "United Kingdom"
+                }
+            ],
+            "order": 1
+        },
+        {
+            "type": "input",
+            "key": "versichertesObjekt.kraftstoffart",
+            "label": "Kraftstoffart",
+            "enabled": true,
+            "visible": false,
+            "order": 2
+        },
+        {
+            "type": "input",
+            "key": "versichertesObjekt.amtlichesKennzeichen",
+            "label": "Amtl. Kennzeichen",
+            "order": 5
+        },
+        {
+            "type": "dropdown",
+            "key": "versichertesObjekt.hersteller.key",
+            "label": "Hersteller",
+            "options": [
+                {
+                    "key": "IN",
+                    "value": "India"
+                },
+                {
+                    "key": "USA",
+                    "value": "United States of America"
+                },
+                {
+                    "key": "UK",
+                    "value": "United Kingdom"
+                }
+            ],
+            "order": 3
+        },
+        {
+            "type": "input",
+            "key": "versichertesObjekt.typ.key",
+            "label": "Type",
+            "order": 4
+        }
+    ]
+}

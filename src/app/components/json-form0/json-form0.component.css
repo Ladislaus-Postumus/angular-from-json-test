@@ -1,0 +1,64 @@
+/* to get the grid style for the form input:
+2 columns and default row size*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 407px 407px ;
+
+    column-gap: 20px;
+    /* row-gap: 5px;  */
+
+}
+/* to layout  specific formfields*/
+.right-padded-short-form-field {
+    padding-right: 5px;
+    width: 201px;
+  }
+.short-form-field{
+    width: 201px;
+}
+.long-form-field{
+    width: 407px;
+}
+
+/* all button stuff */
+.button-container{
+    padding-bottom: 10px;
+}
+.button-container-padding-up{
+    padding-top: 10px;
+}
+.long-button{
+    width: 407px;
+}
+.padded-button{
+    margin-left: 20px;
+    width: 407px;
+}
+.small-width-button-left{
+    width: 198.5px;
+    margin-left: 20px;
+}
+.small-width-button-right{
+    width: 198.5px;
+    margin-left: 10px;
+}
+.float-right-button{
+    float:right;
+    width:407px
+
+}
+
+
+/* to get space between divider and headline */
+.mat-divider{
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+  }
+
+/* to get space beweteen the criteria and the responses */
+.response-container{
+    padding-top: 15px;
+}

@@ -1,0 +1,11 @@
+<mat-toolbar-row>
+  <span>{{innerFormData.name}}</span>
+</mat-toolbar-row>
+<mat-divider></mat-divider>
+<div>
+  <form [formGroup]="form">
+    <div *ngFor="let control of innerFormData.controls" class="form-row">
+      <app-controls [control]="control" [form]="form"></app-controls>
+    </div>
+  </form>
+</div>

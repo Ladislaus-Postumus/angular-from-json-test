@@ -1,0 +1,8 @@
+<div [formGroup]="form" [hidden]="control.visible" [contentEditable]="control.enabled">
+  <mat-form-field appearance="fill" class="long-form-field">
+    <mat-label>{{control.label}}</mat-label>
+    <mat-select [formControlName]="control.key">
+      <mat-option *ngFor="let option of control.options" [value]="option.value">{{option.value}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

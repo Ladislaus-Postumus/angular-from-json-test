@@ -1,0 +1,17 @@
+{
+  "name": "jsonForm0",
+  "controls": [
+    {
+      "type": "input",
+      "key": "foo",
+      "label": "foo",
+      "order": 1
+    },
+    {
+      "type": "input",
+      "key": "bar",
+      "label": "bar",
+      "order": 2
+    }
+  ]
+}
