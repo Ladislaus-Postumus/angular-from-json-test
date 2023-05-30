@@ -1,65 +1,140 @@
 {
-    "name": "Fahrzeugdaten",
-    "controls": [
+  "splitType": "Accordion",
+  "page": [
+    {
+      "$schema": "../jsonSchema/form.schema.json",
+      "name": "Fahrzeugdaten",
+      "controls": [
         {
-            "type": "dropdown",
-            "key": "versichertesObjekt.wagnisKennzeichen.key",
-            "label": "Wagnis-KZ",
-            "options": [
-                {
-                    "key": "IN",
-                    "value": "India"
-                },
-                {
-                    "key": "USA",
-                    "value": "United States of America"
-                },
-                {
-                    "key": "UK",
-                    "value": "United Kingdom"
-                }
-            ],
-            "order": 1
+          "order": 0,
+          "type": "input",
+          "key": "versichertesObjekt.wagnisKennzeichen.key",
+          "label": "Wagnis-KZ",
+          "selectors": "WL0222"
         },
         {
-            "type": "input",
-            "key": "versichertesObjekt.kraftstoffart",
-            "label": "Kraftstoffart",
-            "enabled": true,
-            "visible": false,
-            "order": 2
+          "order": 1,
+          "type": "input",
+          "key": "versichertesObjekt.kraftstoffart",
+          "label": "Kraftstoffart"
         },
         {
-            "type": "input",
-            "key": "versichertesObjekt.amtlichesKennzeichen",
-            "label": "Amtl. Kennzeichen",
-            "order": 5
+          "order": 2,
+          "type": "dropdown",
+          "key": "versichertesObjekt.hersteller.key",
+          "label": "Hersteller",
+          "selectors": "WL0224"
         },
         {
-            "type": "dropdown",
-            "key": "versichertesObjekt.hersteller.key",
-            "label": "Hersteller",
-            "options": [
-                {
-                    "key": "IN",
-                    "value": "India"
-                },
-                {
-                    "key": "USA",
-                    "value": "United States of America"
-                },
-                {
-                    "key": "UK",
-                    "value": "United Kingdom"
-                }
-            ],
-            "order": 3
+          "order": 3,
+          "type": "input",
+          "key": "versichertesObjekt.typ.key",
+          "label": "Type"
         },
         {
-            "type": "input",
-            "key": "versichertesObjekt.typ.key",
-            "label": "Type",
-            "order": 4
+          "order": 0,
+          "type": "from-to-input",
+          "key": "versichertesObjekt.kaufdatum",
+          "label": "Kaufdatum"
+        },
+        {
+          "order": 0,
+          "type": "input",
+          "key": "versichertesObjekt.amtlichesKennzeichen",
+          "label": "Amtl. Kennzeichen"
+        },
+        {
+          "order": 0,
+          "type": "from-to-input",
+          "key": "versichertesObjekt.erstZulassung",
+          "label": "Erstzulassung"
+        },
+        {
+          "order": 0,
+          "type": "from-to-input",
+          "key": "versichertesObjekt.staerkeKw",
+          "label": "Stärke KW"
         }
-    ]
+      ]
+    },
+    {
+      "$schema": "../jsonSchema/form.schema.json",
+      "name": "Fahrzeugnutzung und Versicherungsnehmer",
+      "controls": [
+        {
+          "order": 0,
+          "type": "dropdown",
+          "key": "versichertesObjekt.abweichenderHalter.key",
+          "label": "Abweichender Halter",
+          "selectors": "WL0230"
+        }
+      ]
+    },
+    {
+      "$schema": "../jsonSchema/form.schema.json",
+      "name": "Leistungsbaustein",
+      "controls": [
+        {
+          "order": 0,
+          "type": "dropdown",
+          "key": "versichertesObjekt.elementarProdukte.leistungsbausteinart.key",
+          "label": "Leistungsbausteinart",
+          "selectors": "WL0234"
+        },
+        {
+          "order": 0,
+          "type": "dropdown",
+          "key": "versichertesObjekt.elementarProdukte.leistungsgrenze.key",
+          "label": "Leistungsgrenze Haftpflicht",
+          "selectors": "WL0235"
+        },
+        {
+          "order": 0,
+          "type": "dropdown",
+          "key": "versichertesObjekt.elementarProdukte.selbstbehalt.key",
+          "label": "Selbstbehalt",
+          "selectors": "WL0236"
+        },
+        {
+          "order": 0,
+          "type": "dropdown",
+          "key": "versichertesObjekt.elementarProdukte.tarifgruppe.key",
+          "label": "Tarifgruppe",
+          "selectors": "WL0237"
+        }
+      ]
+    },
+    {
+      "$schema": "../jsonSchema/form.schema.json",
+      "name": "Partnerdaten",
+      "controls": [
+        {
+          "order": 0,
+          "type": "dropdown",
+          "key": "partner.data.partnerdatenAbstrPerson.kundenkennzeichen.key",
+          "label": "Kundenkennzeichen",
+          "selectors": "WL0020"
+        },
+        {
+          "order": 0,
+          "type": "dropdown",
+          "key": "partner.data.partnerdatenAbstrPerson.rechtsform.key",
+          "label": "Gesellschaftform",
+          "selectors": "WL0026"
+        },
+        {
+          "order": 0,
+          "type": "input",
+          "key": "partner.data.hauptadresse.postleitzahl",
+          "label": "Postleitzahl"
+        },
+        {
+          "order": 0,
+          "type": "input",
+          "key": "partner.data.hauptadresse.ort",
+          "label": "Wohnort"
+        }
+      ]
+    }
+  ]
 }

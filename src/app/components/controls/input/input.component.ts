@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { JsonFormControl, JsonFormData } from '../../json.form.data';
+import { Control } from '../../json.form.data';
 
 @Component({
   selector: 'app-input',
@@ -8,7 +8,7 @@ import { JsonFormControl, JsonFormData } from '../../json.form.data';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  @Input() control!: JsonFormControl;
+  @Input() control!: Control;
   @Input() form!: FormGroup;
 
   constructor() {}

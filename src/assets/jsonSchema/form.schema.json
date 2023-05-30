@@ -2,12 +2,34 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "$ref": "#/definitions/Form",
   "definitions": {
+    "Tabs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "tabs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Form"
+          }
+        }
+      },
+      "required": [
+        "tabs"
+      ],
+      "title": "Tabs"
+    },
     "Form": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string"
+        },
+        "order": {
+          "type": "number"
         },
         "controls": {
           "type": "array",
@@ -17,58 +39,46 @@
         }
       },
       "required": [
-        "controls",
-        "name"
+        "name",
+        "order",
+        "controls"
       ],
       "title": "Form"
     },
     "Control": {
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
-        "type": {
+        "name": {
           "type": "string"
         },
-        "key": {
-          "type": "string"
+        "order": {
+          "type": "integer"
+        },
+        "controlType": {
+          "type": "string",
+          "enum": ["input", "dropdown", "checkbox"]
         },
         "label": {
           "type": "string"
         },
-        "options": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Option"
-          }
+        "required": {
+          "type": "boolean"
         },
-        "order": {
-          "type": "integer"
+        "invisible": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
         }
       },
       "required": [
-        "key",
-        "label",
+        "name",
         "order",
-        "type"
+        "controlType",
+        "label"
       ],
       "title": "Control"
-    },
-    "Option": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "key": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "key",
-        "value"
-      ],
-      "title": "Option"
     }
   }
 }

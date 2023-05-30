@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { JsonFormData } from '../../json.form.data';
+import { Control } from '../../json.form.data';
 import { DropDownControl } from './dropdown-control';
 
 @Component({
