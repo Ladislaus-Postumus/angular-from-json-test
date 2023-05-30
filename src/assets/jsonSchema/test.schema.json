@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Foo",
+  "definitions": {
+    "Foo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "foo"
+      ],
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "foo": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Foobar"
+              },
+              {
+                "$ref": "#/definitions/Bar"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Foobar": {
+      "type": "object",
+      "required": [
+        "name",
+        "order"
+      ],
+      "name": {
+        "type": "string"
+      },
+      "order": {
+        "type": "number"
+      }
+    },
+    "Bar": {
+      "type": "object",
+      "required": [
+        "kind",
+        "vi"
+      ],
+      "kind": {
+        "type": "string",
+        "enum": [
+          "a",
+          "b"
+        ]
+      },
+      "vi": {
+        "type": "boolean"
+      }
+    }
+  }
+}

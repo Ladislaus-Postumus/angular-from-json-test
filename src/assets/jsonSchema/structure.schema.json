@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Structure",
+  "definitions": {
+    "Structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["tabs", "accordion"]
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Child"
+          }
+        }
+      },
+      "required": [
+        "children",
+        "type"
+      ],
+      "title": "Structure"
+    },
+    "Child": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "header": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "header",
+        "order",
+        "path"
+      ],
+      "title": "Child"
+    }
+  }
+}

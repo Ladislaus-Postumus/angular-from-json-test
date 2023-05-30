@@ -1,7 +1,13 @@
 <ng-container *ngFor="let entry of hash | keyvalue">
-    <ng-container *ngIf="entry.value">
-        <div class="centered-app">
-            <app-json-form0 [jsonFormData]="entry.value"></app-json-form0>
-        </div>
-    </ng-container>
+  <ng-container *ngIf="entry.value">
+    <app-tabview [tab]="entry.value" ]></app-tabview>
+  </ng-container>
 </ng-container>
+
+<!--<p-tabView>
+  <ng-container *ngFor="let i of test.tabs">
+    <p-tabPanel header="{{i.name}}">
+      <app-json-form0 [jsonFormData]="i"></app-json-form0>
+    </p-tabPanel>
+  </ng-container>
+</p-tabView>-->

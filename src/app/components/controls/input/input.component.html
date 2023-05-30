@@ -1,10 +1,6 @@
 <div [formGroup]="form">
-  <ng-container *ngIf="control.type == 'input'">
-    <mat-form-field appearance="fill" class="long-form-field">
-      <mat-label>{{control.label}}</mat-label>
-      <input matInput [type]="control.type" [formControlName]="control.key" [style.visible]="control.visible?'hidden':'visible'"
-        [readonly]="control.enabled">
-    </mat-form-field>
-    <div>{{control.enabled}}</div>
-  </ng-container>
+  <span class="p-float-label">
+    <input type="text" id="{{control.name}}" pInputText [formControlName]="control.name" [style.visibility]="control.invisible?'hidden':'visible'"><!-- [type]="control.type" -->
+    <label for="{{control.name}}" [style.visibility]="control.invisible?'hidden':'visible'">{{control.label}}</label>
+  </span>
 </div>

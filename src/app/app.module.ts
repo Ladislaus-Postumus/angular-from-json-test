@@ -21,6 +21,10 @@ import { InputComponent } from './components/controls/input/input.component';
 import { ControlsComponent } from './components/controls/controls.component';
 import { DropdownComponent } from './components/controls/dropdown/dropdown.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AccordionModule} from "primeng/accordion";
+import {InputTextModule} from "primeng/inputtext";
+import {TabViewModule} from "primeng/tabview";
+import { TabviewComponent } from './components/controls/tabview/tabview.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JsonForm0Component,
     InputComponent,
     ControlsComponent,
-    DropdownComponent
+    DropdownComponent,
+    TabviewComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSortModule,
     MatTabsModule,
     MatProgressSpinnerModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    AccordionModule,
+    InputTextModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

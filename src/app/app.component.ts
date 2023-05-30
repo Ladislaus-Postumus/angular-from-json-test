@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { FormControl, Validators, FormGroup } from '@angular/forms';
-import { map } from 'rxjs';
-import { JsonFormData } from './components/json.form.data';
+import {HttpClient} from '@angular/common/http';
+import {Component} from '@angular/core';
+import {Observable} from 'rxjs';
+import {ControlType, Tab} from './components/json.form.data';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +12,13 @@ export class AppComponent {
   title = 'test-app';
 
   baseFormPath = '/assets/jsonForms/';
-  forms = ['jsonForm0', 'jsonForm1', 'searchCriteriaFormConfig'];
+  forms = ['tabs'];
   suffix = '.json';
-  hash: Map<string, JsonFormData> = new Map<string, JsonFormData>([]);
+  hash: Map<string, Tab> = new Map<string, Tab>([]);
 
   constructor(private httpClient: HttpClient) {
     console.log(this.hash)
-   }
+  }
 
   ngOnInit() {
     this.fillMap();
@@ -28,16 +27,18 @@ export class AppComponent {
 
   fillMap() {
     this.forms.forEach(form => {
-      this.getFileContents(this.baseFormPath + form + this.suffix).subscribe((formData: any) => {
-        var foo: JsonFormData = formData;
-        foo.controls.sort((a, b) => a.order - b.order)
-        this.hash.set(form, foo)
+      var foo = this.baseFormPath + form + this.suffix
+      console.log(foo);
+      this.getFileContents("/assets/jsonForms/empty.json").subscribe((formPage: any) => {
+        //formPage.page.sort((a, b) => a.order - b.order)
+        this.hash.set(form, formPage)
       })
     })
   }
 
-  getFileContents(name: string) {
+
+  getFileContents(name: string): Observable<any> {
     return this.httpClient
-      .get(name)
+      .get<any>(name)
   }
 }

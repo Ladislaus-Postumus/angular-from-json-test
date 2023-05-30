@@ -1,0 +1,7 @@
+<p-tabView>
+  <ng-container *ngFor="let i of tab.forms">
+    <p-tabPanel header="{{i.name}}">
+      <app-json-form0 [jsonFormData]="i"></app-json-form0>
+    </p-tabPanel>
+  </ng-container>
+</p-tabView>

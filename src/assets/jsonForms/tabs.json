@@ -1,0 +1,35 @@
+{
+  "tabType": "TABS",
+  "forms": [
+    {
+      "order": 0,
+      "name": "Kunden",
+      "controls": [ ]
+    },
+    {
+      "order": 1,
+      "name": "Sparte",
+      "controls": [
+        {
+          "controlType": "dropdown",
+          "name": "sparte",
+          "label": "Sparte",
+          "order": 0,
+          "values": [ ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "name": "KFZ",
+      "controls": [ ],
+      "invisible": true
+    },
+    {
+      "order": 3,
+      "name": "Sach",
+      "controls": [],
+      "invisible": true
+    }
+  ]
+}
